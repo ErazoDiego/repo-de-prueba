@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
     <!-- Barra de Navegación -->
     <nav class="">
         <div class="navbar">
@@ -34,15 +34,15 @@
                 </ul>
             </div>
             <div>
-                <button>
-                    <span class="">
-                        <img class="navbar-icon"src="/img/carrito-de-compras.png" alt="">
-                    </span>
+                <button >
+                    
+                    <img id="btn-carrito"class="navbar-icon"src="/img/carrito-de-compras.png" alt="">
+                    
                 </button>
                 <button class="btn-hamburgesa" type="button" >
-                    <span class="">
-                        <img class="navbar-icon" src="/img/menu.png" alt="">
-                    </span>
+                    
+                    <img class="navbar-icon" src="/img/menu.png" alt="">
+                    
                 </button> 
             </div>
         </div>
@@ -50,12 +50,12 @@
 
     <div class="contenedor-de-productos" id="contenedor_productos"></div>
     
-    <div class="modal-contenedor">
+    <div class="modal-carrito-contenedor" id="modal-carrito-contenedor">
         <div class="modal-carrito">
             <h3>Carrito</h3>
-            <button id="cerrar-carito"> </button>
+            <button class="cerrar-carrito" id="cerrar-carrito">x</button>
             <div id="carrito-contenedor">
-
+                <h1>hola soy el modal del carrito</h1>
             </div>
             <p class="precio-producto">precio total: $<span id="precio-total">0</span></p>
             <button id="vaciar-carrito" class="btn-agregar">Vaciar Carrito</button>
