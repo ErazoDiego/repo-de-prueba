@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/23b464fd77.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body id="body">
@@ -34,14 +35,14 @@
                 </ul>
             </div>
             <div>
-                <button >
-                    
-                    <img id="btn-carrito"class="navbar-icon"src="/img/carrito-de-compras.png" alt="">
-                    
+                <button>
+                    <img class="navbar-icon" id="btn-carrito" src="/img/carrito-de-compras.png" alt="icono de carrito">
+                     <span id="contador-carrito">0</span> 
                 </button>
+                
                 <button class="btn-hamburgesa" type="button" >
                     
-                    <img class="navbar-icon" src="/img/menu.png" alt="">
+                    <img class="navbar-icon" src="/img/menu.png" alt="menu hamburgesa">
                     
                 </button> 
             </div>
@@ -58,7 +59,7 @@
                 
             </div>
             <p class="precio-producto">precio total: $<span id="precio-total">0</span></p>
-            <button id="vaciar-carrito" class="btn">Vaciar Carrito</button>
+            <button id="vaciar-carrito" class="btn">Vaciar Carrito<i class="fa-solid fa-cart-shopping"></i></button>
             <button id="pagar-carrito" class="btn">Pagar</button>
         </div>
 

@@ -5,19 +5,23 @@ let base_de_datos =[
         descripcion:"Bajonera",
         precio:375.00,
         id:1,
+        cantidad: 1,
     },
     {
         imagen:"/img/Taparterias.jpeg",
         descripcion:"Taparterias",
-        precio:375.00,
+        precio:500.00,
         id:2,
+        cantidad: 1,
     },
     {
         imagen:"/img/Palta Burger.jpeg",
         descripcion:"Palta Burger",
-        precio:375.00,
+        precio:650.00,
         id:3,
+        cantidad: 1,
     },
+   
    
  
 ];
@@ -35,7 +39,7 @@ base_de_datos.forEach((producto)=>{
     const div=document.createElement('div');
     div.classList.add('producto');
     div.innerHTML=`
-    <div>
+    <div class="cart-div">
         <img src="${producto.imagen}" alt=""class="cart-img">
     </div>
     <h3>${producto.descripcion}</h3>
@@ -56,9 +60,12 @@ base_de_datos.forEach((producto)=>{
  * utiliza la propiedad id 
  */
 const agregar_carrito=(producto_id)=>{
+  
+   
     const item= base_de_datos.find((prod) => prod.id === producto_id);
     carrito.push(item);
-    console.log(carrito);
+    console.log(carrito);    
+   
     actualizar_carrito();
 
 };
@@ -95,6 +102,10 @@ btn_cerrar.addEventListener("click",()=>{
  * captura el contenedor para guardar datos del carrito
  */
 const contenedor_carrito=document.getElementById("carrito-contenedor");
+//captura el contador del carrito
+const contador_carrito=document.getElementById("contador-carrito");
+//captura el span donde se muestra el total de el carrito
+const precio_Total=document.getElementById("precio-total");
 /**
  * Recorre el carrito y va insertando los objetos(productos)
  */
@@ -105,12 +116,18 @@ function actualizar_carrito(){
         div.innerHTML=`
         <th scope="row"><img src="${prod.imagen}" alt="icono"  width=40px height=40px></th>
         <td>${prod.descripcion}</td>
-        <td>$${prod.precio}</td>
+        <td> Cantidad: ${prod.cantidad}</td>
+        <td>Precio: $${prod.precio}</td>
         <td><a href="javascript:eliminar_producto(${prod.id})">
         <button type="button" class=" btn-eliminar btn btn-outline-danger">Eliminar</button>
         </a></td>`
         contenedor_carrito.appendChild(div);
     });
+    //introduce la cantidad de productos en el carrito
+    contador_carrito.innerText=carrito.length;
+    //recorre el carrito sumando los precios
+    precio_Total.innerText= carrito.reduce((acu,prod)=>acu+prod.precio,0);
+
 };
 /**
  * limpia el contenedor para una nueva actualizacion
@@ -137,9 +154,13 @@ function eliminar_producto(prod_id){
     console.log(carrito);
 
 };
-
+/**
+ * captura el boton vaciar carrito del html
+ */
 const btn_vaciar_carrito=document.getElementById("vaciar-carrito");
+//Borra los datos del carrito
 btn_vaciar_carrito.addEventListener("click",()=>{
     carrito.length=0;
     actualizar_carrito();
 })
+
