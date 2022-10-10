@@ -162,5 +162,5 @@ const btn_vaciar_carrito=document.getElementById("vaciar-carrito");
 btn_vaciar_carrito.addEventListener("click",()=>{
     carrito.length=0;
     actualizar_carrito();
-})
+});
 

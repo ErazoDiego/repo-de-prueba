@@ -79,3 +79,59 @@
     font-size: 25px;
 
 }
+
+/*estilos de carousel*/
+.carousel-contenedor{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+   overflow: hidden;
+    position: relative;
+}
+
+.carousel{
+    display: flex;
+    width: 400%;
+    height: 700px;
+    margin-left: -100%;
+    
+}
+.seccion-carousel{
+    width: 100%;
+}
+
+.img-carousel{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn-carousel{
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    position: absolute;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 555, 255, 0.7);
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    top: 40%;
+}
+
+.btn-carousel:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+.btn-derecho{
+    right: 10px;
+}
+.btn-izquierdo{
+    left: 10px;
+}
