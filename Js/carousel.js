@@ -25,6 +25,7 @@ function mover_derecha(){
     //aplica los estilos
     carousel.style.marginLeft ="-200";
     carousel.style.transition ='all 0.5s';
+    
 
     setTimeout(() => {
         //coloca la primer imagen al final

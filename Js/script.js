@@ -67,6 +67,13 @@ const agregar_carrito=(producto_id)=>{
     console.log(carrito);    
    
     actualizar_carrito();
+    Toastify({
+
+        text: "Se agrego al carrito.",
+        
+        duration: 1200
+        
+    }).showToast();
 
 };
 
@@ -113,14 +120,15 @@ function actualizar_carrito(){
     limpiar_campo();
     carrito.forEach((prod)=>{
         const div=document.createElement('div');
+        div.className="fila-carrito"
         div.innerHTML=`
-        <th scope="row"><img src="${prod.imagen}" alt="icono"  width=40px height=40px></th>
-        <td>${prod.descripcion}</td>
-        <td> Cantidad: ${prod.cantidad}</td>
-        <td>Precio: $${prod.precio}</td>
-        <td><a href="javascript:eliminar_producto(${prod.id})">
-        <button type="button" class=" btn-eliminar btn btn-outline-danger">Eliminar</button>
-        </a></td>`
+        <img src="${prod.imagen}" alt="" width=40px height=40px>
+        <p>${prod.descripcion}</p>
+        <p> Cantidad: ${prod.cantidad}</p>
+        <p>Precio: $${prod.precio}</p>
+        <a href="javascript:eliminar_producto(${prod.id})">
+            <button type="button" class=" btn-eliminar ">Eliminar</button>
+        </a>`
         contenedor_carrito.appendChild(div);
     });
     //introduce la cantidad de productos en el carrito
@@ -152,6 +160,13 @@ function eliminar_producto(prod_id){
 
     actualizar_carrito();
     console.log(carrito);
+    Toastify({
+
+        text: "Se elimino del carrito.",
+        
+        duration: 1200
+        
+    }).showToast();
 
 };
 /**
@@ -162,5 +177,12 @@ const btn_vaciar_carrito=document.getElementById("vaciar-carrito");
 btn_vaciar_carrito.addEventListener("click",()=>{
     carrito.length=0;
     actualizar_carrito();
+    Toastify({
+
+        text: "El carrito esta vacio.",
+        
+        duration: 1200
+        
+    }).showToast();
 });
 
