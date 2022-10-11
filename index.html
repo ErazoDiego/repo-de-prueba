@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!--hoja de estilos-->
     <link rel="stylesheet" href="/css/styles.css">
+    <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/23b464fd77.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body id="body">
     <!-- Barra de Navegación -->
-    <nav class="navbar-container">
-        <div class="navbar">
+    <nav class="nav-contenedor">
+        <div class="div-nav">
             <div>
-                <a class="navbar-brand" href="#">logo</a>
+                <a class="nav-logo" href="#">logo</a>
             </div>
             <div class="div-lista" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                <ul class="ul-nav">
+                    <li class="li-item">
+                        <a class="nav-a" href="#">Home</a>
                     </li>               
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">seccion_1</a>
+                    <li class="li-item">
+                        <a class="nav-a" href="#">seccion_1</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">seccion_2</a>
+                    <li class="li-item">
+                        <a class="nav-a" href="#">seccion_2</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link "href="#">seccion_3</a>
+                    <li class="li-item">
+                        <a class="nav-a "href="#">seccion_3</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link "href="#">seccion_4</a>
+                    <li class="li-item">
+                        <a class="nav-a "href="#">seccion_4</a>
                     </li>
                 </ul>
             </div>
@@ -71,18 +75,62 @@
         <div class="btn-carousel btn-derecho" id="btn-derecho">></div>
         <div class="btn-carousel btn-izquierdo" id="btn-izquierdo"><</div>
     </div>
-
-
-
-
-    
-
-
     <br>
     <br>
     <br>
     <div class="contenedor-de-productos" id="contenedor_productos"></div>
+    <br>
+    <br>
+    <br>
+    <!--Formulario de contacto-->
+    <div class="container">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-3 position-relative">
+                <label for="validationTooltip01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationTooltip01" value="Ingrese texto" required>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-3 position-relative">
+                <label for="validationTooltip02" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="validationTooltip02" value="Ingrese texto" required>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-3 position-relative">
+                <label for="validationTooltip02" class="form-label">Telefono</label>
+                <input type="text" class="form-control" id="validationTooltip02" value="Ingrese telefono" required>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+              </div>
+
+                
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Consulta</label>
+            </div>
+            
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
     
+
+
+
+
+
+    
+    <!--Modal de carrito-->
     <div class="modal-carrito-contenedor" id="modal-carrito-contenedor">
         <div class="modal-carrito">
             <button class="cerrar-carrito" id="cerrar-carrito">x</button>
@@ -96,7 +144,9 @@
         </div>
 
     </div>
-
+    <!--bootstrap-->
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Archivos js-->
     <script src="/Js/carousel.js"></script>
     <script src="/Js/script.js"></script>
 </body>

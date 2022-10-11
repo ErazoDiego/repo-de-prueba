@@ -1,4 +1,4 @@
-.navbar-container{
+.nav-contenedor{
     display:grid;
     top:0;
     width:100%;
@@ -6,16 +6,13 @@
     z-index: 1;
    
 }
-.navbar{
+.div-nav{
     position: sticky;
-   
     left: 0;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
     padding: 1rem 2rem;
     background-color: whitesmoke;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -27,14 +24,15 @@
     height: 20px;
 }
 
-.navbar-nav{
+.ul-nav{
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
 }
 
-.nav-link{
+.nav-a{
     text-decoration: none;
+    
     
 }
 
@@ -136,7 +134,7 @@
     -webkit-transition: all .4s ease;
     -o-transition: all .4s ease;
     transition: all .4s ease;
-    top: 40%;
+    top: 50%;
 }
 
 .btn-carousel:hover{
